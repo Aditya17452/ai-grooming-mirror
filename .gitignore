@@ -1,0 +1,10 @@
+.env
+data/
+model/weights/
+__pycache__/
+*.pyc
+*.jpg
+*.png
+*.webp
+*.h5
+*.pth
