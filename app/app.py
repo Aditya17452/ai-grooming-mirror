@@ -93,7 +93,8 @@ st.markdown("""
 if 'history' not in st.session_state:
     st.session_state.history = []
 if 'api_key' not in st.session_state:
-    st.session_state.api_key = ""
+    # Pre-fill from GEMINI_API_KEY in .env if set; can still be entered in the sidebar
+    st.session_state.api_key = os.getenv("GEMINI_API_KEY", "")
 if 'current_analysis' not in st.session_state:
     st.session_state.current_analysis = None
 
